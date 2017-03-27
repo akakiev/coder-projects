@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Coder</title>
+    <style>
+	.pagecontent {
+    padding: 24px;
+    background-color:yellow;
+}
+.page{
+    background:blue;
+    }
+p{
+    color:brown;
+    }
+#box{
+    color:red;
+    position:absolute;
+    }
+	</style>
+</head>
+<body class="page">
+    <div class="pagecontent">
+        <h1 id="box">Hello World</h1>
+        <p>My html goes here.</p>
+        <p>It is my first web-page.</p>
+    </div>
+	<script>
+	window.onload = function() {
+    //This code will run after your page loads
+var pos=0;
+var box=document.getElementById('box');
+var t=setInterval(move, 10);
+function move()
+{
+    if(pos>=550)
+    {
+        clearInterval(t);
+        }
+        else
+        {
+            pos +=1;
+            box.style.left=pos+'px';
+            }
+    }
+};
+	</script>
+</body>
+</html>
